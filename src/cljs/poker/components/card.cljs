@@ -64,7 +64,7 @@
         clr-cls  (case suit
                    (:s :c) "text-black"
                    (:h :d) "text-red-800")]
-    [:div.w-16.h-24.p-2.border.border-black.rounded-md.shadow-xl.bg-white.flex.flex-col.justify-around
+    [:div.w-18.h-26.p-2.border.border-black.rounded-md.shadow-xl.bg-white.flex.flex-col.justify-around
      {:class clr-cls}
      [:div.self-start kind-str]
      [:div.self-center {:style {:font-size "32px"}} suit-str]
@@ -74,4 +74,4 @@
   []
   [:div.w-16.h-24.p-2.border.border-black.rounded-md.shadow-xl.bg-white.flex.flex-col.justify-center.items-center.bg-blue-800
    {:style {:font-size "3rem"}}
-   "🐦"])
+   "⚜️"])
