@@ -67,8 +67,7 @@
     [:div.w-16.h-24.p-2.border.border-black.rounded-md.shadow-xl.bg-white.flex.flex-col.justify-around
      {:class clr-cls}
      [:div.self-start kind-str]
-     [:div.self-center {:style {:font-size "32px"}} suit-str]
-     [:div.self-end.rotate-180 kind-str]]))
+     [:div.self-center {:style {:font-size "32px"}} suit-str]]))
 
 (defn card-back
   []
