@@ -255,9 +255,9 @@
 (defn render-empty-seat
   [seat ?off-seat]
   (if ?off-seat
-    [:div.w-24.h-24.border.border-dashed.border-gray-300.opacity-50.rounded-full.text-gray-300.flex.place-content-center.text-5xl.hover:bg-blue-800.cursor-pointer
+    [:div.w-24.h-24.border.border-dashed.border-gray-300.opacity-50.rounded-full.text-gray-300.flex.place-content-center.text-5xl.hover:bg-green-800.cursor-pointer
      {:on-click (partial on-buyin {:seat seat})}
-     "☟"]
+     "👇"]
     [:div.w-24.h-24.border.border-dashed.border-gray-300.opacity-50.rounded-full]))
 
 (defn render-player-last-message

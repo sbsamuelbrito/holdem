@@ -72,6 +72,6 @@
 
 (defn card-back
   []
-  [:div.w-16.h-24.p-2.border.border-black.rounded-md.shadow-xl.bg-white.flex.flex-col.justify-center.items-center.bg-blue-800
+  [:div.w-16.h-24.p-2.border.border-black.rounded-md.shadow-xl.bg-white.flex.flex-col.justify-center.items-center.bg-green-600
    {:style {:font-size "3rem"}}
    "⚜️"])
