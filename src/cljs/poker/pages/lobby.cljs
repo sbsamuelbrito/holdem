@@ -41,14 +41,14 @@
                                    :game/title)
                              games)]
         [:div.h-screen.w-screen.flex.flex-col.justify-start.items-center.text-gray-900
-         [:h1.text-lg.font-bold "Lobby"]
+         [:h1.text-lg.font-bold "Zen Poker Mesas"]
          [:div
-          "Hello, "
+          "Olá, "
           (:player/name player-id)]
          [:div.w-48.bg-gray-500.h-1.m-2]
-         [:h3 "Available rooms:"]
+         [:h3 "Mesas disponíveis:"]
          [:div.p-2.border.border-gray-700.w-52.flex.flex-col.items-stretch
-          (when-not (seq sorted-games) "No games!")
+          (when-not (seq sorted-games) "Sem Mesa!")
           (for [{:game/keys [id players title]} sorted-games]
             ^{:key id}
             (let [inside (some #(= player-id %) players)]
@@ -68,14 +68,14 @@
          [:div.w-48.bg-gray-500.h-1.m-2]
          [:form.flex.flex-col {:on-submit on-create-game}
           [:input.border-gray-700.placeholder-gray-700
-           {:auto-focus true, :type "text", :name "title", :placeholder "Title"}]
-          [:button.mt-2.py-2.border.border-gray-700.hover:bg-gray-800.hover:text-white "New Room"]]
+           {:auto-focus true, :type "text", :name "title", :placeholder "Nome da Mesa"}]
+          [:button.mt-2.py-2.border.border-gray-700.hover:bg-gray-800.hover:text-white "Nova Mesa"]]
          [:div.w-48.bg-gray-500.h-1.m-2]
          [:button.mt-2.py-2.px-4.hover:bg-gray-800.text-gray-700.hover:text-gray-200.text-2xl
           {:on-click #(re-frame/dispatch [:router/push-state :ladder])}
-          "Ladder 🪜"]
+          "Histórico"]
          [:div.w-48.bg-gray-500.h-1.m-2]
-         [:h3 "Online players:"]
+         [:h3 "Players On:"]
          [:p
           (for [id @player-ids*]
             ^{:key id}

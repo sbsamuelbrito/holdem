@@ -1,5 +1,5 @@
 (ns poker.pages.ladder
-  "Page for ladder."
+  "Página de Classificação"
   (:require
    [re-frame.core :as re-frame]
    [poker.events.ladder]
@@ -7,7 +7,7 @@
    [poker.utils :as u]))
 
 (defn ladder-page-init
-  "Query for all games."
+  "Consulta todos os jogos."
   []
   (re-frame/dispatch [:ladder/list-leaderboard]))
 
@@ -19,11 +19,11 @@
         [:div.h-screen.w-screen.flex.flex-col.justify-start.items-stretch.text-gray-900.p-4
          [:button.absolute.left-0.top-0.p-4
           {:on-click #(re-frame/dispatch [:router/push-state :lobby])}
-          "Lobby"]
+          "Mesas"]
          [:button.absolute.right-0.top-0.p-4
           {:on-click #(re-frame/dispatch [:ladder/list-leaderboard])}
-          "Refresh"]
-         [:div.text-2xl.mt-8.text-center "Ladder Leaderboard"]
+          "Recarregar"]
+         [:div.text-2xl.mt-8.text-center "Mural de Classificação"]
          (for [[idx
                 {:player/keys [name avatar],
                  :ladder/keys [hands buyin returns score]}]

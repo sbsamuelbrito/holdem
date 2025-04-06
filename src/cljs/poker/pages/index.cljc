@@ -46,7 +46,7 @@
    [:form.flex.flex-col.justify-center.items-center
     {:on-submit on-signup, :suppress-hydration-warning true}
     [:div.leading-9.text-2xl.font-bold.flex.items-center
-     "WELCOME TO HOLDEM!!"]
+     "Zen Poker"]
     [render-signup-error]
     [:div.mt-4
      [:input {:auto-focus true, :name "name", :type "text", :placeholder "Your Nick"}]]
@@ -65,4 +65,4 @@
       [:div "🐈" [:input {:type "radio", :name "avatar", :value "🐈"}]]
       [:div "🐕" [:input {:type "radio", :name "avatar", :value "🐕"}]]]]
     [:button.div.border.border-2.border-black.bg-gray-300.self-stretch.text-center.p-4
-     "Start"]]])
+     "Começar"]]])

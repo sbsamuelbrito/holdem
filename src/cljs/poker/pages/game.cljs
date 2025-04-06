@@ -98,7 +98,7 @@
         (.log js/console "render game page:" state)
 
         [:div.h-full.w-full.flex.flex-col.select-none.overflow-hidden
-         {:class (if has-all-in? ["bg-red-900"] ["bg-blue-900"])}
+         {:class (if has-all-in? ["bg-red-900"] ["bg-green-900"])}
          [:div.absolute.top-0.left-0.p-4.text-gray-300.hover:text-red-400.cursor-pointer.z-40
           {:on-click
            on-leave}
@@ -107,7 +107,7 @@
           {:on-click toggle-popup}
           "History/Help"]
          (when @popup*
-           [:div.absolute.bottom-0.left-0.right-0.top-0.bg-blue-900.flex.flex-col.justify-start.items-stretch.text-gray-300.z-50.p-4.overflow-scroll
+           [:div.absolute.bottom-0.left-0.right-0.top-0.bg-green-900.flex.flex-col.justify-start.items-stretch.text-gray-300.z-50.p-4.overflow-scroll
             (case @popup*
               :history [history-popup {:on-close close-popup, :on-toggle toggle-popup}]
               :help    [help {:on-close close-popup, :on-toggle toggle-popup}])])

@@ -16,7 +16,7 @@
 
 (defn card-placeholder
   []
-  [:div.w-16.h-24])
+  [:div.w-18.h-26])
 
 (defn parse-suit-str
   [suit]
